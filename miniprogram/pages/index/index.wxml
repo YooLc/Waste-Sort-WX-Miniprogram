@@ -1,0 +1,27 @@
+<!--miniprogram/pages/index/index.wxml-->
+<view class="container">
+  <view class="catagory-container">
+    <view class="catagory-item cat-recycle">
+      <button bindtap="detail_click" class="cat-button" data-curstatus="close" data-id="0">可回收垃圾</button>
+    </view>
+    <view class="catagory-item cat-kitchen">
+      <button bindtap="detail_click" class="cat-button" data-curstatus="close" data-id="1">厨余垃圾</button>
+    </view>
+    <view class="catagory-item cat-harm">
+      <button bindtap="detail_click" class="cat-button" data-curstatus="close" data-id="2">有害垃圾</button>
+    </view>
+    <view class="catagory-item cat-other">
+      <button bindtap="detail_click" class="cat-button" data-curstatus="close" data-id="3">其他垃圾</button>
+    </view>
+  </view>
+  <block wx:if='{{showDetails}}'>
+    <view class="detail-container">
+      <view class="detail-title">{{title}}</view>
+      <view class="detail-content">
+        <view wx:for="{{content}}" wx:key="index" class="detail-item">{{item}}</view>
+      </view>
+      <view class="btn-ok" bindtap="detail_click" data-curstatus="open">确定</view>
+     </view>
+  </block>
+  <view class='detail-mask' wx:if='{{showDetails}}'></view>
+</view>

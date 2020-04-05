@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#439400",
+    "navigationBarTitleText": "地道的垃圾分类",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#FFF",
+    "selectedColor": "#FFF",
+    "backgroundColor": "#999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "分类速查"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "知识检测"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
