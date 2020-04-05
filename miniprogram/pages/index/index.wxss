@@ -62,7 +62,7 @@
 }
 
 .detail-content {
-  height: 80%;
+  height: 82%;
   overflow-y: scroll;
 }
 
@@ -81,6 +81,7 @@
 }
 
 .detail-item {
+  font-size: 20px;
   margin-top: 10rpx;
   margin-left: 30rpx;
   padding: 10rpx;
@@ -89,6 +90,8 @@
 .btn-ok {
   position: relative;
   bottom: 0px;
+  height: 60rpx;
+  width: 100%;
   font: 20px "microsoft yahei";
   color: #12c509;
   text-align: center;

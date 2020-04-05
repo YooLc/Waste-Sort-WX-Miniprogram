@@ -73,7 +73,6 @@ Page({
         title: this.data.wasteCatList[catId].cat,
         wasteCatList: this.data.wasteCatList
       });
-      console.log(this.data.content);
     }
 
     if(curStatus == "open") {
