@@ -18,7 +18,10 @@
     <view class="detail-container">
       <view class="detail-title">{{title}}</view>
       <view class="detail-content">
-        <view wx:for="{{content}}" wx:key="index" class="detail-item">{{item}}</view>
+        <view wx:for-items="{{content}}" wx:key="index">
+          <view class="detail-subtitle">{{item.subcat_name}}</view>
+          <view wx:for="{{item.detail_items}}" class="detail-item">{{item}}</view>
+        </view>
       </view>
       <view class="btn-ok" bindtap="detail_click" data-curstatus="open">确定</view>
      </view>

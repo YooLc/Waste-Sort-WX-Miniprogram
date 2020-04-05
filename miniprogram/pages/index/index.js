@@ -11,19 +11,55 @@ Page({
     wasteCatList: [
       {
         cat:"可回收垃圾",
-        items:["你","我","他","你","我","他","你","我","他","你","我","他","你","我","他","你","我","他","你","我","他"]
+        subcats: [
+          {
+            subcat_name: "废纸",
+            detail_items: ["报纸", "杂志", "图书", "包装纸", "办公用纸", "纸盒"]
+          },
+          {
+            subcat_name: "塑料",
+            detail_items: ["塑料袋", "塑料包装物", "塑料餐具", "牙刷", "杯子", "矿泉水瓶", "塑料玩具", "塑料文具", "塑料生活用品", "洗发液瓶", "洗手液瓶", "洗衣液瓶", "洗洁精瓶"]
+          },
+          {
+            subcat_name: "玻璃",
+            detail_items: ["玻璃饮料瓶", "玻璃酒瓶", "坏玻璃杯", "碎玻璃窗", "废玻璃板", "镜片", "镜子"]
+          },
+          {
+            subcat_name: "金属",
+            detail_items: ["易拉罐", "金属罐头盒", "装饰物", "铝箔", "铁片", "铁钉", "铁管", "废铁丝", "旧钢丝球", "铜导线"]
+          },
+          {
+            subcat_name: "纺织物",
+            detail_items: ["废弃衣服", "裤子", "袜子", "毛巾", "书包", "布鞋", "床单", "被褥", "毛绒玩具"]
+          }
+        ]
       },
       {
         cat:"厨余垃圾",
-        items:["123","234","456"]
+        subcats: [
+          {
+            subcat_name: "厨余垃圾",
+            detail_items: ["菜叶", "剩菜", "剩饭", "果皮", "蛋壳", "茶渣", "骨头"]
+          }
+        ]
       },
       {
         cat:"有害垃圾",
-        items:["12333","23334","43356"]
+        subcats: [
+          {
+            subcat_name: "有害垃圾",
+            detail_items: ["废电池", "废荧光灯管", "废灯泡", "废水银温度计", "废油漆桶", "过期药品"]
+          }
+        ]
       },
       {
         cat:"其他垃圾",
-        items:["asd123","23df4","456dfa"]
+        subcats: [
+          {
+            subcat_name: "难以回收的垃圾",
+            detail_items: ["砖瓦陶瓷", "渣土", "卫生间废纸", "瓷器碎片"]
+          }
+        ]
       }
     ]
   },
@@ -33,10 +69,11 @@ Page({
     if(curStatus == "close") {
       this.setData({
         showDetails: true,
-        content: this.data.wasteCatList[catId].items,
+        content: this.data.wasteCatList[catId].subcats,
         title: this.data.wasteCatList[catId].cat,
         wasteCatList: this.data.wasteCatList
       });
+      console.log(this.data.content);
     }
 
     if(curStatus == "open") {

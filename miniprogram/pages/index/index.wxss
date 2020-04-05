@@ -61,13 +61,6 @@
   z-index: 1001;
 }
 
-.detail-item {
-  margin-top: 10rpx;
-  padding: 10rpx;
-  border-bottom: 3rpx solid #E8E8EA;
-  text-align: center;
-}
-
 .detail-content {
   height: 80%;
   overflow-y: scroll;
@@ -80,6 +73,19 @@
   border-bottom: 4rpx solid #E8E8EA;
 }
 
+.detail-subtitle {
+  margin-left: 20rpx;
+  padding: 10rpx;
+  font-size: 25px;
+  border-bottom: 4rpx solid #E8E8EA;
+}
+
+.detail-item {
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  padding: 10rpx;
+  border-bottom: 3rpx solid #E8E8EA;
+}
 .btn-ok {
   position: relative;
   bottom: 0px;
