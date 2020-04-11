@@ -85,6 +85,46 @@ Page({
     }
   },
 
+  searchName: function(e) {
+    var text = e.detail.value;
+    var list = this.data.wasteCatList;
+    if (!text) { 
+      wx.showToast({
+        title: "请输入要查询的垃圾",
+        icon: "none",
+        duration: 1500
+      });
+      return;
+    }
+    
+    // 这段代码让我有点不舒服
+    for (var i = 0; i < 4; ++i) {
+      var curCat = list[i].cat;
+      var subCatList = list[i].subcats;
+      for (var j = 0; j < subCatList.length; ++j) {
+        var curSubCat = subCatList[j].subcat_name;
+        var curSubCatList = subCatList[j].detail_items;
+        for (var k = 0; k < curSubCatList.length; ++k) {
+          if (curSubCatList[k].indexOf(text) >= 0) {
+            wx.showToast({
+              title: curSubCatList[k] + " 是 " + curCat + " 中的 " + curSubCat,
+              icon: "none",
+              mask: true,
+              duration: 3000
+            });
+            return;
+          }
+        }
+      }
+    }
+    wx.showToast({
+      title: "没找到啊",
+      icon: "none",
+      mask: true,
+      duration: 3000
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

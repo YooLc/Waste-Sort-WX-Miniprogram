@@ -1,4 +1,16 @@
 /* miniprogram/pages/index/index.wxss */
+.search-container {
+  height: 100rpx;
+  width: 680rpx;
+}
+
+.search-input {
+  margin: 20rpx 20rpx 0 20rpx;
+  padding: 10rpx 10rpx 10rpx 20rpx;
+  background-color: #b9b9b9;
+  border-radius: 30rpx;
+}
+
 .catagory-container {
   display: flex;
   flex-direction: row;

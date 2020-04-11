@@ -1,5 +1,8 @@
 <!--miniprogram/pages/index/index.wxml-->
 <view class="container">
+  <view class="search-container">
+    <input class="search-input" value="{{keyWord}}" bindconfirm="searchName" placeholder="这是什么垃圾？" type="text" />
+  </view>
   <view class="catagory-container">
     <view class="catagory-item cat-recycle">
       <button bindtap="detail_click" class="cat-button" data-curstatus="close" data-id="0">可回收垃圾</button>
